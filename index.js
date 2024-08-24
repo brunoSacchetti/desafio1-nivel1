@@ -11,7 +11,7 @@ function main() {
     sortByParam(process.argv[3]);
   } else if (process.argv[2] === '--search'){
     console.log(`Buscar pelicula por título: ${process.argv[3]}`);
-    console.table(searchPelicula(process.argv[3]));
+    searchPelicula(process.argv[3]);
   } else if (process.argv[2] === '--tag'){
     console.log(`Todas las peliculas que tienen el tag: ${process.argv[3]}`);
     console.table(searchTag(process.argv[3]));

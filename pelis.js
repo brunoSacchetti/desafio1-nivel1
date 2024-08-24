@@ -30,14 +30,13 @@ function sortByParam(propiedad){
         //Si son distintos tipos de datos
         return 0;
     });
-    console.log(peliculasParsed);
+    console.table(peliculasParsed);
 }
 
 function searchPelicula(tituloABuscar){
     const peliculas = getAll();
     //Convierte a minusculas el titulo, y verificia si contiene el titulo a buscar tambien en minusculas
     return peliculas.filter((peli) => peli.title.toLowerCase().includes(tituloABuscar.toLowerCase()));
-
 }
 
 function searchTag(tagABuscar){
@@ -46,12 +45,12 @@ function searchTag(tagABuscar){
     let peliculasConTags = [];
 
     //Para cada pelicula de todas las peliculas
-    for(const peli in peliculas){
+    for(const peli of peliculas){
         //Para cada tag en el array de Tags
-        for(const tag in peliculas[peli].tags){
+        for(const tag of peli.tags){
             //Si el tag coincide con el buscado, lo agrega a la lista de peliculas con ese tag
-            if(peliculas[peli].tags[tag].toLowerCase() === tagABuscar.toLowerCase()){
-                peliculasConTags.push(peliculas[peli]);
+            if(tag.toLowerCase() === tagABuscar.toLowerCase()){
+                peliculasConTags.push(peli);
             }
         }
     }
