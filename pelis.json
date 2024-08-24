@@ -1,0 +1,21 @@
+[{
+  "title": "Rapidos y Furiosos",
+  "rating": 4,
+  "tags": ["acción", "favorita", "nueva"]
+},
+{
+  "title": "Cars",
+  "rating": 3,
+  "tags": ["favorita", "nueva"]
+},
+{
+  "title": "Avengers: Endgame",
+  "rating": 5,
+  "tags": ["aventura", "favorita", "nueva"]
+},
+{
+  "title": "The Shawshank Redemption",
+  "rating": 7,
+  "tags": ["drama", "favorita", "nueva"]
+}
+]
