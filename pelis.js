@@ -6,12 +6,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function getAll() {
-    const datos = fs.readFileSync(path.join(__dirname + "/pelis.json"));
+    const datos = fs.readFileSync(path.join(__dirname, 'pelis.json'), 'utf8');
     return JSON.parse(datos);
 }
 
 function sortByParam(propiedad){
-    const peliculas = fs.readFileSync(path.join(__dirname + "/pelis.json"));
+    const peliculas = getAll();
     const peliculasParsed = JSON.parse(peliculas);
     
     peliculasParsed.sort((a,b) => {
